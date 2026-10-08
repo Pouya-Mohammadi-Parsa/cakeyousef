@@ -255,13 +255,11 @@ class _ChoiceStep extends StatelessWidget {
     required this.title,
     required this.items,
     required this.onSelect,
-    this.subtitle,
     this.image,
     this.onBack,
   });
 
   final String title;
-  final String? subtitle;
   final String? image;
   final List<_Choice> items;
   final ValueChanged<String> onSelect;
@@ -280,18 +278,6 @@ class _ChoiceStep extends StatelessWidget {
             color: AppColors.dark900,
           ),
         ),
-        if (subtitle != null) ...[
-          const SizedBox(height: 6),
-          Text(
-            subtitle!,
-            style: GoogleFonts.vazirmatn(
-              fontSize: 12.5,
-              height: 1.8,
-              color: AppColors.dark700,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ],
         if (image != null && image!.isNotEmpty) ...[
           const SizedBox(height: 14),
           _CakeImage(path: image!),

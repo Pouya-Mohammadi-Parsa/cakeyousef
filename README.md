@@ -1,6 +1,6 @@
 # CakeAcademy / کیک‌اکادمی
 
-آکادمی آنلاین کیک و شیرینی — پیاده‌سازی Flutter از قالب UI.
+آکادمی آنلاین کیک و شیرینی — اپ موبایل Flutter (Android / iOS).
 
 ## اجرا
 
@@ -9,4 +9,4 @@ flutter pub get
 flutter run
 ```
 
-فونت Vazirmatn از طریق `google_fonts` بارگذاری می‌شود (نیاز به اینترنت در اولین اجرا).
+فونت Vazirmatn از `assets/fonts` و در صورت نیاز از طریق `google_fonts` بارگذاری می‌شود.

@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../state/courses_repository.dart';
-import '../utils/payment_helper.dart';
 import '../models/models.dart';
+import '../state/courses_repository.dart';
 import '../theme/app_colors.dart';
+import '../utils/format_utils.dart';
 import '../utils/network_image.dart';
+import '../utils/payment_helper.dart';
 
 class CourseDetailScreen extends StatefulWidget {
   final CourseItem course;
@@ -58,16 +59,6 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
     );
   }
 
-  String _toFaDigits(String input) {
-    const en = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    const fa = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-    var out = input;
-    for (var i = 0; i < 10; i++) {
-      out = out.replaceAll(en[i], fa[i]);
-    }
-    return out;
-  }
-
   Future<void> _openSite(BuildContext context) async {
     final raw = _extra.siteUrl;
     if (raw.isEmpty) return;
@@ -98,7 +89,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
   Widget build(BuildContext context) {
     final extra = _extra;
     final chapters = extra.chapters;
-    final students = _toFaDigits(extra.students);
+    final students = toFaDigits(extra.students);
     final top = MediaQuery.paddingOf(context).top;
 
     return Scaffold(
@@ -388,7 +379,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         icon: Icons.menu_book_rounded,
                         trailing: chapters.isEmpty
                             ? null
-                            : '${_toFaDigits('${chapters.length}')} فصل',
+                            : '${toFaDigits('${chapters.length}')} فصل',
                       ),
                       const SizedBox(height: 10),
                       if (chapters.isEmpty)
@@ -414,7 +405,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                           return _ChapterTile(
                             index: i + 1,
                             title: chapters[i],
-                            faIndex: _toFaDigits('${i + 1}'),
+                            faIndex: toFaDigits('${i + 1}'),
                           );
                         }),
 

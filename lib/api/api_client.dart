@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:http/http.dart' as http;
 
 import 'api_config.dart';
@@ -105,11 +105,7 @@ class ApiClient {
       throw const ApiException('زمان پاسخ‌گویی سرور تمام شد');
     } on http.ClientException catch (e) {
       debugPrint('API ClientException: $e');
-      throw ApiException(
-        kIsWeb
-            ? 'مرورگر به API وصل نشد (CORS یا قطعی سرور). روی Android تست کنید یا CORS را روی سرور باز کنید.'
-            : 'اتصال به سرور برقرار نشد',
-      );
+      throw const ApiException('اتصال به سرور برقرار نشد');
     } on ApiException {
       rethrow;
     } catch (e) {
@@ -126,7 +122,7 @@ class ApiClient {
         }
       }
     } catch (_) {
-      // Non-JSON body (e.g. HTML 502 gateway page).
+      // Non-JSON error body from gateway/proxy.
     }
 
     if (response.statusCode == 502 || response.statusCode == 503) {

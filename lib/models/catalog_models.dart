@@ -5,16 +5,6 @@ import '../models/models.dart';
 import '../theme/app_colors.dart';
 import '../utils/format_utils.dart';
 
-class CatalogProductsResult {
-  final List<ShopProductDto> products;
-  final List<String> categories;
-
-  const CatalogProductsResult({
-    required this.products,
-    required this.categories,
-  });
-}
-
 class ShopProductDto {
   final String id;
   final String title;

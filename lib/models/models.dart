@@ -1,33 +1,5 @@
 import 'package:flutter/material.dart';
 
-class CategoryItem {
-  final String emoji;
-  final String title;
-  final String? count;
-  final bool selected;
-
-  const CategoryItem({
-    required this.emoji,
-    required this.title,
-    this.count,
-    this.selected = false,
-  });
-}
-
-class SlideItem {
-  final String imageUrl;
-  final String badge;
-  final String title;
-  final String subtitle;
-
-  const SlideItem({
-    required this.imageUrl,
-    required this.badge,
-    required this.title,
-    required this.subtitle,
-  });
-}
-
 class QuickAccessItem {
   final String title;
   final IconData icon;
@@ -108,44 +80,6 @@ class CourseTag {
   const CourseTag({required this.label, required this.bg, required this.fg});
 }
 
-class TutorialItem {
-  final String emoji;
-  final String title;
-  final String subtitle;
-  final String duration;
-  final String views;
-  final String priceLabel;
-  final bool isFree;
-  final List<Color> gradientColors;
-
-  const TutorialItem({
-    required this.emoji,
-    required this.title,
-    required this.subtitle,
-    required this.duration,
-    required this.views,
-    required this.priceLabel,
-    required this.gradientColors,
-    this.isFree = false,
-  });
-}
-
-class InstructorItem {
-  final String initial;
-  final String name;
-  final String courses;
-  final List<Color> gradientColors;
-  final Color? glowColor;
-
-  const InstructorItem({
-    required this.initial,
-    required this.name,
-    required this.courses,
-    required this.gradientColors,
-    this.glowColor,
-  });
-}
-
 class StoryItem {
   final String id;
   final String username;
@@ -155,9 +89,6 @@ class StoryItem {
   final bool isMine;
   final bool seen;
   final String? coverAsset;
-  final bool isLive;
-  final String? liveTitle;
-  final String? viewerCount;
 
   const StoryItem({
     required this.id,
@@ -168,9 +99,6 @@ class StoryItem {
     this.isMine = false,
     this.seen = false,
     this.coverAsset,
-    this.isLive = false,
-    this.liveTitle,
-    this.viewerCount,
   });
 
   StoryItem copyWith({bool? seen}) {
@@ -183,32 +111,8 @@ class StoryItem {
       isMine: isMine,
       seen: seen ?? this.seen,
       coverAsset: coverAsset,
-      isLive: isLive,
-      liveTitle: liveTitle,
-      viewerCount: viewerCount,
     );
   }
-}
-
-/// Active Instagram-style live session shown at the start of stories.
-class LiveSession {
-  final String id;
-  final String hostName;
-  final String title;
-  final String viewerCount;
-  final String? coverAsset;
-  final List<Color> avatarGradient;
-  final bool isActive;
-
-  const LiveSession({
-    required this.id,
-    required this.hostName,
-    required this.title,
-    required this.viewerCount,
-    required this.avatarGradient,
-    this.coverAsset,
-    this.isActive = true,
-  });
 }
 
 class StoryPage {

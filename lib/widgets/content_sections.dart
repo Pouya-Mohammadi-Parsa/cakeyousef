@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../state/products_repository.dart';
 import '../screens/product_detail_screen.dart';
+import '../state/products_repository.dart';
 import '../theme/app_colors.dart';
 import '../utils/app_nav.dart';
 import '../utils/network_image.dart';
 import 'section_header.dart';
-
-class TutorialsSection extends StatelessWidget {
-  const TutorialsSection({super.key});
-
-  @override
-  Widget build(BuildContext context) => const SizedBox.shrink();
-}
 
 class ProductsSection extends StatefulWidget {
   const ProductsSection({super.key});
@@ -53,7 +46,8 @@ class _ProductsSectionState extends State<ProductsSection> {
               )
             else if (!_repo.hasData)
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 child: Text(
                   'هنوز محصولی متصل نشده — منتظر API فروشگاه',
                   textAlign: TextAlign.center,
@@ -148,11 +142,4 @@ class _ProductsSectionState extends State<ProductsSection> {
       },
     );
   }
-}
-
-class InstructorsSection extends StatelessWidget {
-  const InstructorsSection({super.key});
-
-  @override
-  Widget build(BuildContext context) => const SizedBox.shrink();
 }
