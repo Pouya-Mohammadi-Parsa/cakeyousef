@@ -4,11 +4,13 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../services/version_checker.dart';
 import '../state/auth_session.dart';
 import '../state/courses_repository.dart';
 import '../state/products_repository.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_fonts.dart';
+import '../widgets/update_dialog.dart';
 import 'main_shell.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -41,6 +43,7 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   Future<void> _boot() async {
+    final versionFuture = VersionChecker().check();
     await Future.wait([
       AuthSession.instance.restore(),
       ProductsRepository.instance.load(),
@@ -48,6 +51,16 @@ class _SplashScreenState extends State<SplashScreen>
       Future<void>.delayed(const Duration(milliseconds: 450)),
     ]);
     if (!mounted) return;
+
+    final update = await versionFuture;
+    if (!mounted) return;
+    if (update.needsUpdate) {
+      await showUpdateDialog(context, result: update);
+      if (!mounted) return;
+      // Force update dialog never dismisses; soft continues into the app.
+      if (update.kind == UpdateKind.force) return;
+    }
+
     _openApp();
   }
 
