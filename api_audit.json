@@ -1,0 +1,191 @@
+﻿[
+    {
+        "Area":  "Platform",
+        "Method":  "GET",
+        "Path":  "/health",
+        "HTTP":  200,
+        "Ok":  "True",
+        "LatencyMs":  630,
+        "Detail":  "status=ok | service=cakeyousef-api | version=v1"
+    },
+    {
+        "Area":  "Catalog",
+        "Method":  "GET",
+        "Path":  "/catalog/products",
+        "HTTP":  200,
+        "Ok":  "False",
+        "LatencyMs":  558,
+        "Detail":  "error=Failed query: select \"catalogItems\".\"id\", \"catalogItems\".\"legacy_id\", \"catalogItems\".\"kind\", \"catalogItems\".\"author_user..."
+    },
+    {
+        "Area":  "Catalog",
+        "Method":  "GET",
+        "Path":  "/catalog/products/1",
+        "HTTP":  200,
+        "Ok":  "False",
+        "LatencyMs":  1571,
+        "Detail":  "error=Failed query: select \"catalogItems\".\"id\", \"catalogItems\".\"legacy_id\", \"catalogItems\".\"kind\", \"catalogItems\".\"author_user..."
+    },
+    {
+        "Area":  "Catalog",
+        "Method":  "GET",
+        "Path":  "/catalog/courses",
+        "HTTP":  200,
+        "Ok":  "False",
+        "LatencyMs":  584,
+        "Detail":  "error=Failed query: select \"catalogItems\".\"id\", \"catalogItems\".\"legacy_id\", \"catalogItems\".\"kind\", \"catalogItems\".\"author_user..."
+    },
+    {
+        "Area":  "Catalog",
+        "Method":  "GET",
+        "Path":  "/catalog/courses/%D8%AC%D8%A7%D9%85%D8%B9-%DA%A9%DB%8C%DA%A9-%D8%B3%D8%A7%D8%B2%D8%B4%D9%88",
+        "HTTP":  200,
+        "Ok":  "False",
+        "LatencyMs":  564,
+        "Detail":  "error=Failed query: select \"catalogItems\".\"id\", \"catalogItems\".\"legacy_id\", \"catalogItems\".\"kind\", \"catalogItems\".\"author_user..."
+    },
+    {
+        "Area":  "Auth",
+        "Method":  "POST",
+        "Path":  "/auth/login",
+        "HTTP":  400,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Auth",
+        "Method":  "POST",
+        "Path":  "/auth/register/request-otp",
+        "HTTP":  500,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Auth",
+        "Method":  "POST",
+        "Path":  "/auth/register/verify-otp",
+        "HTTP":  500,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Auth",
+        "Method":  "POST",
+        "Path":  "/auth/otp/resend",
+        "HTTP":  500,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Auth",
+        "Method":  "POST",
+        "Path":  "/auth/forgot-password/request-otp",
+        "HTTP":  500,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Auth",
+        "Method":  "POST",
+        "Path":  "/auth/forgot-password/verify-otp",
+        "HTTP":  500,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Auth",
+        "Method":  "POST",
+        "Path":  "/auth/reset-password",
+        "HTTP":  500,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Account",
+        "Method":  "GET",
+        "Path":  "/account/profile",
+        "HTTP":  401,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Account",
+        "Method":  "PUT",
+        "Path":  "/account/profile",
+        "HTTP":  401,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Account",
+        "Method":  "GET",
+        "Path":  "/account/dashboard",
+        "HTTP":  401,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Account",
+        "Method":  "GET",
+        "Path":  "/account/checkout-details",
+        "HTTP":  401,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Account",
+        "Method":  "PUT",
+        "Path":  "/account/checkout-details",
+        "HTTP":  401,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Locations",
+        "Method":  "GET",
+        "Path":  "/locations?type=province",
+        "HTTP":  500,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Locations",
+        "Method":  "GET",
+        "Path":  "/locations?type=city\u0026parent=1",
+        "HTTP":  500,
+        "Ok":  "",
+        "LatencyMs":  0,
+        "Detail":  ""
+    },
+    {
+        "Area":  "Site",
+        "Method":  "GET",
+        "Path":  "https://www.cakeyousef.ir/",
+        "HTTP":  200,
+        "Ok":  "",
+        "LatencyMs":  4901,
+        "Detail":  "non-json body; len=181886"
+    },
+    {
+        "Area":  "Site",
+        "Method":  "GET",
+        "Path":  "https://www.cakeyousef.ir/courses",
+        "HTTP":  200,
+        "Ok":  "",
+        "LatencyMs":  3808,
+        "Detail":  "non-json body; len=147991"
+    }
+]

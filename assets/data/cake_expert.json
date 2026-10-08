@@ -1,0 +1,1784 @@
+[
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "300 گرم",
+        "result":  "قالب مورد نیاز قطر 10 تعداد تخم مرغ 1 عدد خامه مورد نیاز برای فیلینگ 55 گرم خامه کاور روکش 100 گرم 20 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image1.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "600 گرم",
+        "result":  "قالب مورد نیاز قطر 12 تعداد تخم مرغ 2 عدد خامه مورد نیاز برای فیلینگ 110 گرم خامه کاور روکش 200 گرم 30 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image1.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "800 گرم",
+        "result":  "قالب مورد نیاز قطر 15 تعداد تخم مرغ 3 عدد خامه مورد نیاز برای فیلینگ 150 گرم خامه کاور روکش 300 گرم 50 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image1.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1/100 گرم",
+        "result":  "قالب مورد نیاز قطر 17 تعداد تخم مرغ 4 عدد خامه مورد نیاز برای فیلینگ 200 گرم خامه کاور روکش 400 گرم 65 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image1.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1/200 گرم",
+        "result":  "قالب مورد نیاز قطر 18 تعداد تخم مرغ 5 عدد خامه مورد نیاز برای فیلینگ 220 گرم خامه کاور روکش 400 گرم 80 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image1.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1/500 گرم",
+        "result":  "قالب مورد نیاز قطر 20 تعداد تخم مرغ 6 عدد خامه مورد نیاز برای فیلینگ 260 گرم خامه کاور روکش 550 گرم 100 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image1.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1/800 گرم",
+        "result":  "قالب مورد نیاز قطر 23 تعداد تخم مرغ 7 عدد خامه مورد نیاز برای فیلینگ 300 گرم خامه کاور روکش 600 گرم 120 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image1.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/200 گرم",
+        "result":  "قالب مورد نیاز قطر 25 تعداد تخم مرغ 9 عدد خامه مورد نیاز برای فیلینگ 360 گرم خامه کاور روکش 700 گرم 150 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image1.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/500 گرم",
+        "result":  "قالب مورد نیاز قطر 27 تعداد تخم مرغ 10 عدد خامه مورد نیاز برای فیلینگ 430 گرم خامه کاور روکش 800 گرم 165 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image2.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/900 گرم",
+        "result":  "قالب مورد نیاز قطر 30 تعداد تخم مرغ 12 عدد خامه مورد نیاز برای فیلینگ 500 گرم خامه کاور روکش 900 گرم 200 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image2.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "3/500 گرم",
+        "result":  "قالب مورد نیاز قطر 35 تعداد تخم مرغ 15 عدد خامه مورد نیاز برای فیلینگ 650 گرم خامه کاور روکش 1000 گرم 250 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image2.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/800 گرم",
+        "result":  "قالب مورد نیاز 25*35 تعداد تخم مرغ 10 عدد خامه مورد نیاز برای فیلینگ 600 گرم خامه کاور روکش 900 گرم 220 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image2.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "3/300 گرم",
+        "result":  "قالب مورد نیاز 30*40 تعداد تخم مرغ 12 عدد خامه مورد نیاز برای فیلینگ 700 گرم خامه کاور روکش 1000 گرم 280 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image2.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "3/800 گرم",
+        "result":  "قالب مورد نیاز 35*45 تعداد تخم مرغ 14 عدد خامه مورد نیاز برای فیلینگ 800 گرم خامه کاور روکش 1100 گرم 340 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image2.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "5/700 گرم",
+        "result":  "قالب مورد نیاز 40*60 تعداد تخم مرغ 20 عدد خامه مورد نیاز برای فیلینگ 1300 گرم خامه کاور روکش 1600 گرم 560 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image3.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1/300 گرم",
+        "result":  "قالب مورد نیاز 15*15 تعداد تخم مرغ 4 عدد خامه مورد نیاز برای فیلینگ 250 گرم خامه کاور روکش 500 گرم 80 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image3.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/200 گرم",
+        "result":  "قالب مورد نیاز 20*20 تعداد تخم مرغ 8 عدد خامه مورد نیاز برای فیلینگ 380 گرم خامه کاور روکش 750 گرم 120 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image3.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "3 کیلو",
+        "result":  "قالب مورد نیاز 25*25 تعداد تخم مرغ 12 عدد خامه مورد نیاز برای فیلینگ 500 گرم خامه کاور روکش 980 گرم 180 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image12.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1/100 گرم",
+        "result":  "قالب مورد نیاز 20 تعداد تخم مرغ 4 عدد خامه مورد نیاز برای فیلینگ 200 گرم خامه کاور روکش 400 گرم 65 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image12.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1/500 گرم",
+        "result":  "قالب مورد نیاز23 تعداد تخم مرغ 6 عدد خامه مورد نیاز برای فیلینگ 280 گرم خامه کاور روکش 550 گرم 100 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image12.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2 کیلو",
+        "result":  "قالب مورد نیاز 28 تعداد تخم مرغ 8عدد خامه مورد نیاز برای فیلینگ 380 گرم خامه کاور روکش 600 گرم 130 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image12.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "350 گرم",
+        "result":  "قالب مورد نیاز قطر 10 تعداد تخم مرغ 1 عدد خامه مورد نیاز برای فیلینگ 110 گرم خامه کاور روکش 100 گرم 35 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image4.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "700 گرم",
+        "result":  "قالب مورد نیاز قطر 12 تعداد تخم مرغ 2 عدد خامه مورد نیاز برای فیلینگ 220 گرم خامه کاور روکش 200 گرم 65 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image4.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "1/100 گرم",
+        "result":  "قالب مورد نیاز قطر 15 تعداد تخم مرغ 3 عدد خامه مورد نیاز برای فیلینگ 300 گرم خامه کاور روکش 350 گرم 100 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image4.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "1/400 گرم",
+        "result":  "قالب مورد نیاز قطر 17 تعداد تخم مرغ 4 عدد خامه مورد نیاز برای فیلینگ 400 گرم خامه کاور روکش 450 گرم 130 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image4.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "1/600 گرم",
+        "result":  "قالب مورد نیاز قطر 18 تعداد تخم مرغ 5 عدد خامه مورد نیاز برای فیلینگ 440 گرم خامه کاور روکش 450 گرم 165 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image4.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "1/900 گرم",
+        "result":  "قالب مورد نیاز قطر 20 تعداد تخم مرغ 6 عدد خامه مورد نیاز برای فیلینگ 520 گرم خامه کاور روکش 550 گرم 200 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image4.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "2/200 گرم",
+        "result":  "قالب مورد نیاز قطر 23 تعداد تخم مرغ 7 عدد خامه مورد نیاز برای فیلینگ 600 گرم خامه کاور روکش 650 گرم 230 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image4.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "2/700 گرم",
+        "result":  "قالب مورد نیاز قطر 25 تعداد تخم مرغ 9 عدد خامه مورد نیاز برای فیلینگ 720 گرم خامه کاور روکش 700 گرم 300 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image5.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "3/100 گرم",
+        "result":  "قالب مورد نیاز قطر 27 تعداد تخم مرغ 10 عدد خامه مورد نیاز برای فیلینگ 860 گرم خامه کاور روکش 800 گرم 330 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image5.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "3/600 گرم",
+        "result":  "قالب مورد نیاز قطر 30 تعداد تخم مرغ 12 عدد خامه مورد نیاز برای فیلینگ 1 کیلو خامه کاور روکش 950 گرم 400 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image5.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "4/400 گرم",
+        "result":  "قالب مورد نیاز قطر 35 تعداد تخم مرغ 15 عدد خامه مورد نیاز برای فیلینگ 1/300 گرم خامه کاور روکش 1 کیلو 500 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image5.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "1/600 گرم",
+        "result":  "قالب مورد نیاز 15*15 تعداد تخم مرغ 4 عدد خامه مورد نیاز برای فیلینگ 500 گرم خامه کاور روکش 500 گرم 160 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image5.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "2/600 گرم",
+        "result":  "قالب مورد نیاز 20*20 تعداد تخم مرغ 8 عدد خامه مورد نیاز برای فیلینگ 750 گرم خامه کاور روکش 750 گرم 240 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image5.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "3/600 گرم",
+        "result":  "قالب مورد نیاز 25*25 تعداد تخم مرغ 12 عدد خامه مورد نیاز برای فیلینگ 1 کیلو خامه کاور روکش 980 گرم 360 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image13.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "1/400 گرم",
+        "result":  "قالب مورد نیاز 20 تعداد تخم مرغ 4 عدد خامه مورد نیاز برای فیلینگ 400 گرم خامه کاور روکش 400 گرم 130 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image13.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "2 کیلو",
+        "result":  "قالب مورد نیاز 23 تعداد تخم مرغ 6 عدد خامه مورد نیاز برای فیلینگ 560 گرم خامه کاور روکش 550 گرم 200 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image13.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "2/500 گرم",
+        "result":  "قالب مورد نیاز 28 تعداد تخم مرغ 8 عدد خامه مورد نیاز برای فیلینگ 760 گرم خامه کاور روکش 600 گرم 260 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image13.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "640 گرم",
+        "result":  "2قالب قطر 10 هر قالب 1 تخم مرغ خامه مورد نیاز برای فیلینگ 160 گرم خامه کاور روکش 200 گرم 50 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image6.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1200 گرم",
+        "result":  "2قالب قطر 12 هر قالب 2 تخم مرغ خامه مورد نیاز برای فیلینگ 330 گرم خامه کاور روکش 350 گرم 100 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image6.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "1/750 گرم",
+        "result":  "2قالب قطر 15 هر قالب 3 تخم مرغ خامه مورد نیاز برای فیلینگ 450 گرم خامه کاور روکش 500 گرم 150 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image6.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/350 گرم",
+        "result":  "2قالب قطر 17 هر قالب 4 تخم مرغ خامه مورد نیاز برای فیلینگ 600 گرم خامه کاور روکش 700 گرم 200 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image6.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/750 گرم",
+        "result":  "2قالب قطر 18 هر قالب 5 تخم مرغ خامه مورد نیاز برای فیلینگ 660 گرم خامه کاور روکش 750 گرم 250 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image6.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "3/300 گرم",
+        "result":  "2قالب قطر 20 هر قالب 6 تخم مرغ خامه مورد نیاز برای فیلینگ 780 گرم خامه کاور روکش 900 گرم 300 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image6.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "3/800 گرم",
+        "result":  "2قالب قطر 23 هر قالب 7 تخم مرغ خامه مورد نیاز برای فیلینگ 900 گرم خامه کاور روکش 1 کیلو 350 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image6.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "4/600 گرم",
+        "result":  "2قالب قطر 25 هر قالب 9 تخم مرغ خامه مورد نیاز برای فیلینگ 1/100 گرم خامه کاور روکش 1/100 گرم 450 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image6.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "5/200 گرم",
+        "result":  "2قالب قطر 27 هر قالب 10 تخم مرغ خامه مورد نیاز برای فیلینگ 1/300 گرم خامه کاور روکش 1/200 گرم 500 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image7.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "6/100 گرم",
+        "result":  "2قالب قطر 30 هر قالب 12 تخم مرغ خامه مورد نیاز برای فیلینگ 1/500 گرم خامه کاور روکش 1/400 گرم 600 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image7.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "7/700 گرم",
+        "result":  "2قالب قطر 35 هر قالب15 تخم مرغ خامه مورد نیاز برای فیلینگ 2 کیلو گرم خامه کاور روکش 1/700 گرم 750 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image7.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "6 کیلوگرم",
+        "result":  "2قالب 25*35 هر قالب 10 تخم مرغ خامه مورد نیاز برای فیلینگ 1/800 گرم خامه کاور روکش 1/300 گرم 660 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image7.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "7/100 گرم",
+        "result":  "2قالب 30*40 هر قالب 12 تخم مرغ خامه مورد نیاز برای فیلینگ 2/100 گرم خامه کاور روکش 1/500 گرم 850 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image7.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "8/300 گرم",
+        "result":  "2قالب 35*45 هر قالب 14 تخم مرغ خامه مورد نیاز برای فیلینگ 2/400 گرم خامه کاور روکش 1/700 گرم 1000 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image7.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "12/400 گرم",
+        "result":  "2قالب 40*60 هر قالب 20 تخم مرغ خامه مورد نیاز برای فیلینگ 3/900 گرم خامه کاور روکش2/200 گرم 1700 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image8.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/700 گرم",
+        "result":  "2قالب 15*15 هر قالب 4 تخم مرغ خامه مورد نیاز برای فیلینگ 750 گرم خامه کاور روکش 900 گرم 250 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image8.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "4/500 گرم",
+        "result":  "2قالب 20*20 هر قالب 8 تخم مرغ خامه مورد نیاز برای فیلینگ 1/150گرم خامه کاور روکش 1/200 گرم 350 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image8.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "6/200 گرم",
+        "result":  "2قالب 25*25 هر قالب 12 تخم مرغ خامه مورد نیاز برای فیلینگ 1/500 گرم خامه کاور روکش 1/600 گرم 550 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image14.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "2/300 گرم",
+        "result":  "2قالب 20 هر قالب 4 تخم مرغ خامه مورد نیاز برای فیلینگ 600 گرم خامه کاور روکش 650 گرم 200 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image14.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "3/300 گرم",
+        "result":  "2قالب 23 هر قالب 6 تخم مرغ خامه مورد نیاز برای فیلینگ 850 گرم خامه کاور روکش 850 گرم 300 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image14.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "استوانه ای",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "4/300 گرم",
+        "result":  "2قالب 28 هر قالب 8 تخم مرغ خامه مورد نیاز برای فیلینگ 1/150 گرم خامه کاور روکش 1 کیلو 400 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image14.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "800 گرم",
+        "result":  "2قالب قطر 10 هر قالب 1 تخم مرغ خامه مورد نیاز برای فیلینگ 250 گرم خامه کاور روکش 200 گرم 85گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image10.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "1500 گرم",
+        "result":  "2قالب قطر 12 هر قالب 2 تخم مرغ خامه مورد نیاز برای فیلینگ 500 گرم خامه کاور روکش 350 گرم 165 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image10.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "2/100 گرم",
+        "result":  "2قالب قطر 15 هر قالب 3 تخم مرغ خامه مورد نیاز برای فیلینگ 700 گرم خامه کاور روکش 500 گرم 250 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image10.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "2/800 گرم",
+        "result":  "2قالب قطر 17 هر قالب 4 تخم مرغ خامه مورد نیاز برای فیلینگ 900 گرم خامه کاور روکش 700 گرم 320 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image10.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "3/200 گرم",
+        "result":  "2قالب قطر 18 هر قالب 5 تخم مرغ خامه مورد نیاز برای فیلینگ 1000 گرم خامه کاور روکش 750 گرم 420 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image10.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "4 کیلو",
+        "result":  "2قالب قطر 20 هر قالب 6 تخم مرغ خامه مورد نیاز برای فیلینگ 1/300 گرم خامه کاور روکش 900 گرم 500 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image10.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "4/500 گرم",
+        "result":  "2قالب قطر 23 هر قالب 7 تخم مرغ خامه مورد نیاز برای فیلینگ 1/400 گرم خامه کاور روکش 1 کیلو 580 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image10.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "5/500 گرم",
+        "result":  "2قالب قطر 25 هر قالب 9 تخم مرغ خامه مورد نیاز برای فیلینگ 1/700 گرم خامه کاور روکش 1/100 گرم 750 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image9.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "6/100 گرم",
+        "result":  "2قالب قطر 27 هر قالب 10 تخم مرغ خامه مورد نیاز برای فیلینگ 1/900 گرم خامه کاور روکش 1/200 گرم 820 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image9.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "7/200 گرم",
+        "result":  "2قالب قطر 30 هر قالب 12 تخم مرغ خامه مورد نیاز برای فیلینگ 2/200 گرم خامه کاور روکش 1/400 گرم 1 کیلو گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image9.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "9/200 گرم",
+        "result":  "2قالب قطر 35 هر قالب 15 تخم مرغ خامه مورد نیاز برای فیلینگ 3 کیلو گرم خامه کاور روکش 1/700 گرم 1/250 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image9.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "9 کیلو",
+        "result":  "3قالب 25*35 هر قالب 10 تخم مرغ خامه مورد نیاز برای فیلینگ 3 کیلو گرم خامه کاور روکش 1/800 گرم 1/100 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image9.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "10/800 گرم",
+        "result":  "3قالب 30*40 هر قالب 12 تخم مرغ خامه مورد نیاز برای فیلینگ 3/500 گرم خامه کاور روکش 2 کیلو 1/400 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image9.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "12/700 گرم",
+        "result":  "3قالب 35*45هر قالب 14 تخم مرغ خامه مورد نیاز برای فیلینگ 4 کیلو خامه کاور روکش 2/200 گرم 1/700 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image9.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مستطیل",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "18/800 گرم",
+        "result":  "3قالب 60*40هر قالب 20 تخم مرغ خامه مورد نیاز برای فیلینگ 6/200 کیلو خامه کاور روکش 3/200 گرم 2/800 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image11.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "3200 گرم",
+        "result":  "2قالب 15*15 هر قالب 4 تخم مرغ خامه مورد نیاز برای فیلینگ 1 کیلو گرم خامه کاور روکش 900 گرم 400 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image11.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "5/100 گرم",
+        "result":  "2قالب20*20 هر قالب 8 تخم مرغ خامه مورد نیاز برای فیلینگ 1/600 گرم خامه کاور روکش 1/200 گرم 600 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image11.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "مربع",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "7/500 گرم",
+        "result":  "2قالب 25*25 هر قالب 12 تخم مرغ خامه مورد نیاز برای فیلینگ 2/400 گرم خامه کاور روکش 1/600 گرم 900 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image11.jpeg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "2/800 گرم",
+        "result":  "2قالب 20هر قالب 4 تخم مرغ خامه مورد نیاز برای فیلینگ 1 کیلو خامه کاور روکش 650 گرم 320 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image15.jpg"
+    },
+    {
+        "tiers":  1,
+        "shape":  "قلب",
+        "height":  "استوانه ای",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "4 کیلو",
+        "result":  "2قالب قطر23 هر قالب 6 تخم مرغ خامه مورد نیاز برای فیلینگ 1/300 گرم خامه کاور روکش 850 گرم 500 گرم موز برای فیلینگ",
+        "image":  "assets/images/calculator/image15.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "850 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image26.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 1/100 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image16.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 1/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image22.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 2/300",
+        "result":  "",
+        "image":  "assets/images/calculator/image17.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 2/600",
+        "result":  "",
+        "image":  "assets/images/calculator/image33.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد2/900 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image34.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 3/300",
+        "result":  "",
+        "image":  "assets/images/calculator/image23.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 3/600 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image18.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 4 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image82.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 4/600 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image31.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 5/100 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image27.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 6/100",
+        "result":  "",
+        "image":  "assets/images/calculator/image29.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "1 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image24.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 1/350 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image25.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 2/100 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image20.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 3 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image21.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 3/200 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image35.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 3/600 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image36.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 4/100 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image83.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 4/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image19.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 5 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image37.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 5/500 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image32.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 6/100 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image28.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 7/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image30.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 1/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image50.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 2/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image51.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 4 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image52.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد4/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image53.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 5/400 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image42.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 6 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image40.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 7 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image54.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 8 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image49.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد8/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image39.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 10 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image55.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 11/200 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image44.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 13/200 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image47.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 2/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image56.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 3 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image57.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 4/600 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image58.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 5/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image59.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 6/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image41.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 7/100 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image60.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 8/200 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image61.jpg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 9 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image48.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 10 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image38.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 11/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image46.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 12/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image45.jpeg"
+    },
+    {
+        "tiers":  2,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 14/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image43.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 2/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image66.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 3/300",
+        "result":  "",
+        "image":  "assets/images/calculator/image62.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 4 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image63.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 4/400 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image67.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 4/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image64.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 4/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image104.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 5/400 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image68.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 6/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image65.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 6/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image105.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 7/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image69.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 8/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image70.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "مربع",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "مربع 6 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image71.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "قلب",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "قلب 4/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image106.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 3/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image72.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 4 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image73.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 4/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image74.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 5/200 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image75.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 5/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image76.jpeg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 6/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image77.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 8 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image78.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 9/100 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image79.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 10/500 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image80.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "مربع",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "مربع 7/500 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image81.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "قلب",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "قلب 5/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image109.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "5/600 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image84.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "6/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image88.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "8/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image86.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "9/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image89.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "10/200 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image93.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "11/700",
+        "result":  "",
+        "image":  "assets/images/calculator/image90.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "13/700",
+        "result":  "",
+        "image":  "assets/images/calculator/image92.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "16 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image91.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "18/400 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image87.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "13/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image107.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "10 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image102.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "7 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image85.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "8 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image95.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "9/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image94.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "11 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image96.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "11/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image97.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "13/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image98.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "16 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image99.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "18 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image100.jpg"
+    },
+    {
+        "tiers":  3,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "21/200 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image101.jpg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 4/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image111.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 6 کیلو گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image110.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 7/400 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image110.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 7/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image112.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 8 کیلو گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image113.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 5/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image119.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 7/300 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image120.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 8/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image121.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 9/200 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image122.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 9/700 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image123.jpg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 9/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image127.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 11/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image126.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 14/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image126.jpeg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 15/400 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image128.jpg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 16/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image129.jpg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 13/200 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image130.jpg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 15 کیلو گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image134.jpg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 17/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image131.jpg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 18/400 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image132.jpg"
+    },
+    {
+        "tiers":  4,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 19/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image132.jpg"
+    },
+    {
+        "tiers":  5,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 7/700",
+        "result":  "",
+        "image":  "assets/images/calculator/image115.jpeg"
+    },
+    {
+        "tiers":  5,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "یک لایه کم خامه",
+        "weight":  "گرد 10 کیلو",
+        "result":  "",
+        "image":  "assets/images/calculator/image114.jpeg"
+    },
+    {
+        "tiers":  5,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 8/900 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image116.jpg"
+    },
+    {
+        "tiers":  5,
+        "shape":  "گرد",
+        "height":  "کم ارتفاع",
+        "filling":  "دو لایه استاندارد",
+        "weight":  "گرد 12/800 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image117.jpg"
+    },
+    {
+        "tiers":  5,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 15/500 گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image135.jpg"
+    },
+    {
+        "tiers":  5,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "سه لایه کم خامه",
+        "weight":  "گرد 21 کیلو گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image124.jpg"
+    },
+    {
+        "tiers":  5,
+        "shape":  "گرد",
+        "height":  "استوانه ای",
+        "filling":  "پنج لایه استاندارد",
+        "weight":  "گرد 19 کیلو گرم",
+        "result":  "",
+        "image":  "assets/images/calculator/image125.jpg"
+    }
+]
