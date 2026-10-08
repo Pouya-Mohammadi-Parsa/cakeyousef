@@ -1,8 +1,13 @@
 class SiteConfig {
   static const siteUrl = 'https://www.cakeyousef.ir';
 
-  /// Public JSON used by the app to detect soft/force updates.
-  static const appVersionUrl = '$siteUrl/app-version.json';
+  /// GitHub repo used for in-app updates via Releases.
+  static const githubOwner = 'Pouya-Mohammadi-Parsa';
+  static const githubRepo = 'cakeyousef';
+
+  /// Latest published release (non-draft, non-prerelease).
+  static const githubLatestReleaseUrl =
+      'https://api.github.com/repos/$githubOwner/$githubRepo/releases/latest';
 
   static String courseCheckoutUrl(String? slug) {
     if (slug == null || slug.isEmpty) return siteUrl;
