@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../data/material_calculator.dart';
@@ -70,7 +70,7 @@ class _MaterialCalculatorScreenState extends State<MaterialCalculatorScreen> {
             fontSize: 16,
           ),
         ),
-        iconTheme: const IconThemeData(color: AppColors.dark800),
+        iconTheme: IconThemeData(color: AppColors.dark800),
         actions: [
           if (_step > 0)
             TextButton(
@@ -86,7 +86,7 @@ class _MaterialCalculatorScreenState extends State<MaterialCalculatorScreen> {
         ],
       ),
       body: _store == null
-          ? const Center(child: CircularProgressIndicator(color: AppColors.gold500))
+          ? Center(child: CircularProgressIndicator(color: AppColors.gold500))
           : Column(
               children: [
                 Padding(
@@ -306,7 +306,7 @@ class _ChoiceStep extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const Icon(Icons.chevron_left_rounded, color: AppColors.warm400),
+                      Icon(Icons.chevron_left_rounded, color: AppColors.warm400),
                     ],
                   ),
                 ),
@@ -321,7 +321,7 @@ class _ChoiceStep extends StatelessWidget {
             style: OutlinedButton.styleFrom(
               minimumSize: const Size.fromHeight(48),
               foregroundColor: AppColors.dark800,
-              side: const BorderSide(color: AppColors.warm300),
+              side: BorderSide(color: AppColors.warm300),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             ),
             child: Text('بازگشت', style: GoogleFonts.vazirmatn(fontWeight: FontWeight.w800)),
@@ -427,7 +427,7 @@ class _ResultStep extends StatelessWidget {
                 style: OutlinedButton.styleFrom(
                   minimumSize: const Size.fromHeight(50),
                   foregroundColor: AppColors.dark800,
-                  side: const BorderSide(color: AppColors.warm300),
+                  side: BorderSide(color: AppColors.warm300),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                 ),
                 child: Text('وزن دیگر', style: GoogleFonts.vazirmatn(fontWeight: FontWeight.w800)),
@@ -472,7 +472,7 @@ class _CakeImage extends StatelessWidget {
       child: Image.asset(
         path,
         fit: BoxFit.contain,
-        errorBuilder: (_, __, ___) => const Center(
+        errorBuilder: (_, __, ___) => Center(
           child: Icon(Icons.cake_outlined, color: AppColors.warm400, size: 42),
         ),
       ),

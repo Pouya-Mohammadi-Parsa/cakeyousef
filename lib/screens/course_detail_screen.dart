@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -454,7 +454,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                                     ],
                                   ),
                                 ),
-                                const Icon(Icons.chevron_left_rounded, color: AppColors.warm400),
+                                Icon(Icons.chevron_left_rounded, color: AppColors.warm400),
                               ],
                             ),
                           ),

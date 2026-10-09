@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../state/courses_repository.dart';
@@ -166,7 +166,7 @@ class _CoursesListScreenState extends State<CoursesListScreen> {
                         ],
                       ),
                     ),
-                    const Icon(Icons.chevron_left_rounded,
+                    Icon(Icons.chevron_left_rounded,
                         color: AppColors.warm400),
                   ],
                 ),

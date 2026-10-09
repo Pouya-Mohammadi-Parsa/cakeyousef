@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../models/account_models.dart';
@@ -284,7 +284,7 @@ class _CheckoutDetailsScreenState extends State<CheckoutDetailsScreen> {
         foregroundColor: AppColors.dark900,
       ),
       body: _loading
-          ? const Center(child: CircularProgressIndicator(color: AppColors.gold600))
+          ? Center(child: CircularProgressIndicator(color: AppColors.gold600))
           : ListView(
               padding: const EdgeInsets.all(20),
               children: [
@@ -651,7 +651,7 @@ class _ActionTile extends StatelessWidget {
                 child: Text(title,
                     style: GoogleFonts.vazirmatn(fontWeight: FontWeight.w800)),
               ),
-              const Icon(Icons.chevron_left_rounded, color: AppColors.warm400),
+              Icon(Icons.chevron_left_rounded, color: AppColors.warm400),
             ],
           ),
         ),
@@ -711,7 +711,7 @@ class _MyCoursesCard extends StatelessWidget {
                               width: 44,
                               height: 44,
                             )
-                          : const ColoredBox(
+                          : ColoredBox(
                               color: AppColors.gold50,
                               child: Icon(Icons.school_outlined,
                                   color: AppColors.gold600),

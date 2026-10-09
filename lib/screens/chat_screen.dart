@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -409,7 +409,7 @@ class _Composer extends StatelessWidget {
               color: AppColors.cream,
               borderRadius: BorderRadius.circular(14),
             ),
-            child: const Icon(Icons.attach_file_rounded, color: AppColors.warm400, size: 20),
+            child: Icon(Icons.attach_file_rounded, color: AppColors.warm400, size: 20),
           ),
           const SizedBox(width: 8),
           Expanded(

@@ -8,6 +8,7 @@ import '../services/version_checker.dart';
 import '../state/auth_session.dart';
 import '../state/courses_repository.dart';
 import '../state/products_repository.dart';
+import '../state/theme_controller.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_fonts.dart';
 import '../widgets/update_dialog.dart';
@@ -27,14 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: Colors.white,
-        systemNavigationBarIconBrightness: Brightness.dark,
-      ),
-    );
+    _applySystemUi();
     _entranceController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 560),
@@ -64,16 +58,22 @@ class _SplashScreenState extends State<SplashScreen>
     _openApp();
   }
 
-  void _openApp() {
-    if (!mounted) return;
+  void _applySystemUi() {
+    final dark = ThemeController.instance.isDark;
     SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
+      SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: Colors.white,
-        systemNavigationBarIconBrightness: Brightness.dark,
+        statusBarIconBrightness: dark ? Brightness.light : Brightness.dark,
+        systemNavigationBarColor: dark ? AppColors.cream : Colors.white,
+        systemNavigationBarIconBrightness:
+            dark ? Brightness.light : Brightness.dark,
       ),
     );
+  }
+
+  void _openApp() {
+    if (!mounted) return;
+    _applySystemUi();
     Navigator.of(context).pushReplacement(
       PageRouteBuilder(
         pageBuilder: (context, animation, secondaryAnimation) =>
@@ -94,11 +94,14 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFFFFFCF7), AppColors.cream],
+            colors: [
+              AppColors.isDark ? AppColors.creamDark : const Color(0xFFFFFCF7),
+              AppColors.cream,
+            ],
           ),
         ),
         child: Center(

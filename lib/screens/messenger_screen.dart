@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../data/messenger_data.dart';
@@ -184,7 +184,7 @@ class _MessengerHeader extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: AppColors.cardShadow,
                 ),
-                child: const Icon(Icons.edit_square, size: 18, color: AppColors.dark700),
+                child: Icon(Icons.edit_square, size: 18, color: AppColors.dark700),
               ),
             ],
           ),
@@ -198,7 +198,7 @@ class _MessengerHeader extends StatelessWidget {
             ),
             child: Row(
               children: [
-                const Icon(Icons.search_rounded, color: AppColors.warm400, size: 20),
+                Icon(Icons.search_rounded, color: AppColors.warm400, size: 20),
                 const SizedBox(width: 10),
                 Expanded(
                   child: TextField(
@@ -313,7 +313,7 @@ class _ChatTile extends StatelessWidget {
                     Row(
                       children: [
                         if (chat.pinned) ...[
-                          const Icon(Icons.push_pin_rounded, size: 14, color: AppColors.gold500),
+                          Icon(Icons.push_pin_rounded, size: 14, color: AppColors.gold500),
                           const SizedBox(width: 4),
                         ],
                         Flexible(

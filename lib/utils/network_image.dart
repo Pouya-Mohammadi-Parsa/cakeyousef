@@ -1,4 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
+﻿import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/app_colors.dart';
@@ -12,7 +12,7 @@ class AppNetworkImage extends StatelessWidget {
     this.width,
     this.height,
     this.borderRadius,
-    this.placeholderColor = AppColors.creamDark,
+    this.placeholderColor,
     this.errorWidget,
   });
 
@@ -21,15 +21,16 @@ class AppNetworkImage extends StatelessWidget {
   final double? width;
   final double? height;
   final BorderRadius? borderRadius;
-  final Color placeholderColor;
+  final Color? placeholderColor;
   final Widget? errorWidget;
 
   bool get _isAsset => url.startsWith('assets/');
 
   @override
   Widget build(BuildContext context) {
+    final fill = placeholderColor ?? AppColors.creamDark;
     if (url.isEmpty) {
-      return _box(errorWidget ?? ColoredBox(color: placeholderColor));
+      return _box(errorWidget ?? ColoredBox(color: fill));
     }
 
     final dpr = MediaQuery.devicePixelRatioOf(context);
@@ -49,8 +50,8 @@ class AppNetworkImage extends StatelessWidget {
         errorBuilder: (_, __, ___) =>
             errorWidget ??
             ColoredBox(
-              color: placeholderColor,
-              child: const Icon(
+              color: fill,
+              child: Icon(
                 Icons.image_not_supported_outlined,
                 color: AppColors.warm400,
                 size: 28,
@@ -67,12 +68,12 @@ class AppNetworkImage extends StatelessWidget {
         memCacheHeight: memH,
         fadeInDuration: const Duration(milliseconds: 180),
         fadeOutDuration: const Duration(milliseconds: 120),
-        placeholder: (_, __) => ColoredBox(color: placeholderColor),
+        placeholder: (_, __) => ColoredBox(color: fill),
         errorWidget: (_, __, ___) =>
             errorWidget ??
             ColoredBox(
-              color: placeholderColor,
-              child: const Icon(
+              color: fill,
+              child: Icon(
                 Icons.image_not_supported_outlined,
                 color: AppColors.warm400,
                 size: 28,

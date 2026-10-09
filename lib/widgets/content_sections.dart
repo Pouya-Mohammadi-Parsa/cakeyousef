@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../screens/product_detail_screen.dart';
@@ -93,7 +93,7 @@ class _ProductsSectionState extends State<ProductsSection> {
                               child: Stack(
                                 fit: StackFit.expand,
                                 children: [
-                                  const ColoredBox(color: AppColors.creamDark),
+                                  ColoredBox(color: AppColors.creamDark),
                                   if (item.imageUrl.isNotEmpty)
                                     AppNetworkImage(
                                       url: item.imageUrl,

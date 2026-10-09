@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../models/models.dart';
@@ -96,7 +96,7 @@ class QuickAccessGrid extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            iconTheme: const IconThemeData(color: AppColors.dark800),
+            iconTheme: IconThemeData(color: AppColors.dark800),
           ),
           body: body,
         ),

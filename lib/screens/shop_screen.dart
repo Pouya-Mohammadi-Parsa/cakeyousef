@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../models/catalog_models.dart';
@@ -242,7 +242,7 @@ class _ProductCard extends StatelessWidget {
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
-                      const ColoredBox(color: AppColors.creamDark),
+                      ColoredBox(color: AppColors.creamDark),
                       if (product.imageUrl.isNotEmpty)
                         AppNetworkImage(
                           url: product.imageUrl,

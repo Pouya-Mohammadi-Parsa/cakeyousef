@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
+import '../state/theme_controller.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_fonts.dart';
 import '../utils/app_nav.dart';
@@ -22,12 +23,33 @@ class _MainShellState extends State<MainShell> {
   int _index = 2;
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   final List<Widget?> _tabs = List<Widget?>.filled(5, null);
+  bool _dark = ThemeController.instance.isDark;
 
   @override
   void initState() {
     super.initState();
+    ThemeController.instance.addListener(_onThemeChanged);
     // Home only on cold start — other tabs lazy-built (big-app pattern).
     _ensureTab(2);
+  }
+
+  @override
+  void dispose() {
+    ThemeController.instance.removeListener(_onThemeChanged);
+    super.dispose();
+  }
+
+  void _onThemeChanged() {
+    if (!mounted) return;
+    final dark = ThemeController.instance.isDark;
+    setState(() {
+      _dark = dark;
+      // Cached tab widgets keep old paint; recreate so AppColors apply app-wide.
+      for (var i = 0; i < _tabs.length; i++) {
+        _tabs[i] = null;
+      }
+      _ensureTab(_index);
+    });
   }
 
   Widget _ensureTab(int i) {
@@ -46,7 +68,7 @@ class _MainShellState extends State<MainShell> {
         builder: (_) => Scaffold(
           backgroundColor: AppColors.cream,
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: AppColors.card,
             elevation: 0,
             title: Text(
               title,
@@ -56,7 +78,7 @@ class _MainShellState extends State<MainShell> {
                 fontSize: 16,
               ),
             ),
-            iconTheme: const IconThemeData(color: AppColors.dark800),
+            iconTheme: IconThemeData(color: AppColors.dark800),
           ),
           body: Center(
             child: Padding(
@@ -107,10 +129,14 @@ class _MainShellState extends State<MainShell> {
           bottom: false,
           child: IndexedStack(
             index: _index,
-            children: List.generate(
-              5,
-              (i) => _tabs[i] ?? const SizedBox.shrink(),
-            ),
+            children: List.generate(5, (i) {
+              final tab = _tabs[i];
+              if (tab == null) return const SizedBox.shrink();
+              return KeyedSubtree(
+                key: ValueKey('tab_${i}_$_dark'),
+                child: tab,
+              );
+            }),
           ),
         ),
         bottomNavigationBar: AppBottomNav(

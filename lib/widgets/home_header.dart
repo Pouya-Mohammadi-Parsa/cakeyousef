@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../theme/app_colors.dart';
@@ -25,7 +25,7 @@ class HomeHeader extends StatelessWidget {
                     child: Stack(
                       clipBehavior: Clip.none,
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.notifications_none_rounded,
                           color: AppColors.dark700,
                           size: 22,
@@ -86,7 +86,7 @@ class HomeHeader extends StatelessWidget {
                   // Right: hamburger menu
                   _IconButton(
                     onTap: () => Scaffold.maybeOf(context)?.openDrawer(),
-                    child: const Icon(
+                    child: Icon(
                       Icons.menu_rounded,
                       color: AppColors.dark700,
                       size: 22,
@@ -100,13 +100,13 @@ class HomeHeader extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: AppColors.card,
               borderRadius: BorderRadius.circular(16),
               boxShadow: AppColors.cardShadow,
             ),
             child: Row(
               children: [
-                const Icon(Icons.search, color: AppColors.warm400, size: 22),
+                Icon(Icons.search, color: AppColors.warm400, size: 22),
                 const SizedBox(width: 12),
                 Expanded(
                   child: TextField(
@@ -138,7 +138,7 @@ class HomeHeader extends StatelessWidget {
                     color: AppColors.cream,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.tune_rounded,
                     size: 18,
                     color: AppColors.warm400,
@@ -167,7 +167,7 @@ class _IconButton extends StatelessWidget {
         width: 40,
         height: 40,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.card,
           borderRadius: BorderRadius.circular(12),
           boxShadow: AppColors.cardShadow,
         ),

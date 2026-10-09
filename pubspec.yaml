@@ -1,7 +1,7 @@
 name: cakeyousef
 description: کیک‌اکادمی - آکادمی آنلاین کیک و شیرینی
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
@@ -17,6 +17,8 @@ dependencies:
   shared_preferences: ^2.5.5
   cached_network_image: ^3.4.1
   package_info_plus: ^8.3.0
+  path_provider: ^2.1.5
+  open_filex: ^4.7.0
 
 dev_dependencies:
   flutter_test:

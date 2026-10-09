@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
 
+import '../services/app_updater.dart';
 import '../services/version_checker.dart';
 import '../state/auth_session.dart';
+import '../state/theme_controller.dart';
 import '../theme/app_colors.dart';
 import '../utils/format_utils.dart';
 
@@ -138,6 +139,8 @@ class AppSideMenu extends StatelessWidget {
                           onOpenNotifications?.call();
                         },
                       ),
+                      const SizedBox(height: 4),
+                      const _DarkModeTile(),
                     ],
                   ),
                 ),
@@ -160,7 +163,9 @@ class _VersionFooter extends StatefulWidget {
 
 class _VersionFooterState extends State<_VersionFooter> {
   UpdateCheckResult? _result;
-  bool _opening = false;
+  bool _busy = false;
+  double? _progress;
+  String? _error;
 
   @override
   void initState() {
@@ -176,28 +181,36 @@ class _VersionFooterState extends State<_VersionFooter> {
 
   Future<void> _installUpdate() async {
     final url = _result?.remote?.downloadUrl.trim() ?? '';
-    if (url.isEmpty || _opening) return;
-    setState(() => _opening = true);
+    if (url.isEmpty || _busy) return;
+    setState(() {
+      _busy = true;
+      _progress = 0;
+      _error = null;
+    });
     try {
-      final uri = Uri.tryParse(url);
-      if (uri != null) {
-        await launchUrl(uri, mode: LaunchMode.externalApplication);
-      }
+      await AppUpdater().downloadAndInstall(
+        url,
+        onProgress: (p) {
+          if (!mounted) return;
+          setState(() => _progress = p);
+        },
+      );
+    } catch (e) {
+      if (!mounted) return;
+      setState(() => _error = e.toString());
     } finally {
-      if (mounted) setState(() => _opening = false);
+      if (mounted) setState(() => _busy = false);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final result = _result;
-    final current = result == null
-        ? '...'
-        : toFaDigits(result.currentVersion);
+    final current =
+        result == null ? '...' : toFaDigits(result.currentVersion);
     final hasUpdate = result?.needsUpdate == true && result?.remote != null;
-    final latest = hasUpdate
-        ? toFaDigits(result!.remote!.latestVersion)
-        : null;
+    final latest =
+        hasUpdate ? toFaDigits(result!.remote!.latestVersion) : null;
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
@@ -214,75 +227,87 @@ class _VersionFooterState extends State<_VersionFooter> {
             ),
           ),
           const SizedBox(height: 10),
-          Row(
-            children: [
-              // RTL: first child sits on the right — new version + update action.
-              if (hasUpdate) ...[
-                Flexible(
-                  child: Material(
-                    color: AppColors.gold500,
-                    borderRadius: BorderRadius.circular(12),
-                    child: InkWell(
-                      onTap: _opening ? null : _installUpdate,
-                      borderRadius: BorderRadius.circular(12),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10,
-                          vertical: 8,
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            if (_opening)
-                              const SizedBox(
-                                width: 14,
-                                height: 14,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  color: Colors.white,
-                                ),
-                              )
-                            else
-                              const Icon(
-                                Icons.system_update_rounded,
-                                size: 16,
-                                color: Colors.white,
-                              ),
-                            const SizedBox(width: 6),
-                            Flexible(
-                              child: Text(
-                                'جدید $latest',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.vazirmatn(
-                                  fontSize: 11.5,
-                                  fontWeight: FontWeight.w800,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 10),
-              ],
-              Expanded(
-                child: Text(
-                  'نسخه فعلی $current',
-                  textAlign: hasUpdate ? TextAlign.start : TextAlign.center,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: AppColors.card,
+              borderRadius: BorderRadius.circular(14),
+              boxShadow: AppColors.cardShadow,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  'نسخه فعلی: $current',
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.vazirmatn(
-                    fontSize: 11.5,
+                    fontSize: 12,
                     color: AppColors.dark700,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-              ),
-            ],
+                if (hasUpdate) ...[
+                  const SizedBox(height: 6),
+                  Text(
+                    'نسخه جدید: $latest',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.vazirmatn(
+                      fontSize: 12.5,
+                      color: AppColors.gold700,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  if (_progress != null) ...[
+                    LinearProgressIndicator(
+                      value: _progress,
+                      color: AppColors.gold500,
+                      backgroundColor: AppColors.gold50,
+                    ),
+                    const SizedBox(height: 8),
+                  ],
+                  FilledButton.icon(
+                    onPressed: _busy ? null : _installUpdate,
+                    style: FilledButton.styleFrom(
+                      backgroundColor: AppColors.gold500,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    icon: _busy
+                        ? const SizedBox(
+                            width: 14,
+                            height: 14,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: Colors.white,
+                            ),
+                          )
+                        : const Icon(Icons.system_update_rounded, size: 18),
+                    label: Text(
+                      _busy ? 'در حال دانلود…' : 'دانلود و بروزرسانی',
+                      style: GoogleFonts.vazirmatn(
+                        fontSize: 12.5,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                  if (_error != null) ...[
+                    const SizedBox(height: 8),
+                    Text(
+                      _error!,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.vazirmatn(
+                        fontSize: 11,
+                        color: Colors.red.shade700,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ],
+              ],
+            ),
           ),
         ],
       ),
@@ -302,7 +327,7 @@ class _Item extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.card,
         borderRadius: BorderRadius.circular(14),
         boxShadow: AppColors.cardShadow,
       ),
@@ -325,8 +350,58 @@ class _Item extends StatelessWidget {
             color: AppColors.dark900,
           ),
         ),
-        trailing: const Icon(Icons.chevron_left_rounded, color: AppColors.warm400),
+        trailing: Icon(Icons.chevron_left_rounded, color: AppColors.warm400),
       ),
+    );
+  }
+}
+
+class _DarkModeTile extends StatelessWidget {
+  const _DarkModeTile();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: ThemeController.instance,
+      builder: (context, _) {
+        final dark = ThemeController.instance.isDark;
+        return Container(
+          margin: const EdgeInsets.only(bottom: 8),
+          decoration: BoxDecoration(
+            color: AppColors.card,
+            borderRadius: BorderRadius.circular(14),
+            boxShadow: AppColors.cardShadow,
+          ),
+          child: SwitchListTile(
+            value: dark,
+            onChanged: (v) => ThemeController.instance.setDarkEnabled(v),
+            secondary: Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                color: AppColors.gold50,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(
+                dark ? Icons.dark_mode_rounded : Icons.light_mode_rounded,
+                color: AppColors.gold600,
+                size: 20,
+              ),
+            ),
+            title: Text(
+              'حالت تاریک',
+              style: GoogleFonts.vazirmatn(
+                fontWeight: FontWeight.w800,
+                fontSize: 13.5,
+                color: AppColors.dark900,
+              ),
+            ),
+            activeThumbColor: AppColors.gold500,
+            activeTrackColor: AppColors.gold300.withValues(alpha: 0.45),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+          ),
+        );
+      },
     );
   }
 }

@@ -1,4 +1,4 @@
-import '../models/models.dart';
+﻿import '../models/models.dart';
 import '../theme/app_colors.dart';
 import 'api_client.dart';
 import 'api_config.dart';
@@ -45,7 +45,7 @@ class ContentApi {
         StoryPage(
           emoji: initial,
           caption: alt.isNotEmpty ? alt : label,
-          gradientColors: const [AppColors.dark900, AppColors.dark700],
+          gradientColors: [AppColors.dark900, AppColors.dark700],
           imageAsset: image.isEmpty ? null : image,
         ),
       ],

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -81,7 +81,7 @@ class _ColorMixerScreenState extends State<ColorMixerScreen> {
             fontSize: 16,
           ),
         ),
-        iconTheme: const IconThemeData(color: AppColors.dark800),
+        iconTheme: IconThemeData(color: AppColors.dark800),
         actions: [
           IconButton(
             tooltip: 'حذف آخرین واحد',

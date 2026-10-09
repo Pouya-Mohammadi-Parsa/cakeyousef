@@ -21,6 +21,24 @@ class AppVersionInfo {
     required this.downloadUrl,
     required this.message,
   });
+
+  factory AppVersionInfo.fromJson(Map<String, dynamic> json) {
+    return AppVersionInfo(
+      latestVersion: (json['latestVersion'] as String? ?? '0.0.0').trim(),
+      latestBuild: _asInt(json['latestBuild']),
+      minVersion: (json['minVersion'] as String? ?? '0.0.0').trim(),
+      downloadUrl: (json['downloadUrl'] as String? ?? '').trim(),
+      message: (json['message'] as String? ??
+              'نسخه جدید با بهبودها آماده است.')
+          .trim(),
+    );
+  }
+
+  static int _asInt(dynamic value) {
+    if (value is int) return value;
+    if (value is num) return value.toInt();
+    return int.tryParse('$value') ?? 0;
+  }
 }
 
 class UpdateCheckResult {
@@ -40,22 +58,47 @@ class UpdateCheckResult {
 }
 
 class VersionChecker {
-  VersionChecker({http.Client? client, String? releaseUrl})
-      : _client = client ?? http.Client(),
-        _releaseUrl = releaseUrl ?? SiteConfig.githubLatestReleaseUrl;
+  VersionChecker({http.Client? client}) : _client = client ?? http.Client();
 
   final http.Client _client;
-  final String _releaseUrl;
 
   Future<UpdateCheckResult> check() async {
     final package = await PackageInfo.fromPlatform();
     final currentVersion = package.version;
     final currentBuild = int.tryParse(package.buildNumber) ?? 0;
 
+    final remote = await _fetchRemote();
+    if (remote == null || remote.downloadUrl.isEmpty) {
+      return UpdateCheckResult(
+        kind: UpdateKind.none,
+        currentVersion: currentVersion,
+        currentBuild: currentBuild,
+      );
+    }
+
+    return UpdateCheckResult(
+      kind: _resolveKind(
+        currentVersion: currentVersion,
+        currentBuild: currentBuild,
+        remote: remote,
+      ),
+      remote: remote,
+      currentVersion: currentVersion,
+      currentBuild: currentBuild,
+    );
+  }
+
+  Future<AppVersionInfo?> _fetchRemote() async {
+    final fromGithub = await _fetchGithubRelease();
+    if (fromGithub != null) return fromGithub;
+    return _fetchJsonFallback();
+  }
+
+  Future<AppVersionInfo?> _fetchGithubRelease() async {
     try {
       final response = await _client
           .get(
-            Uri.parse(_releaseUrl),
+            Uri.parse(SiteConfig.githubLatestReleaseUrl),
             headers: const {
               'Accept': 'application/vnd.github+json',
               'User-Agent': 'cakeyousef-android-app',
@@ -63,50 +106,35 @@ class VersionChecker {
             },
           )
           .timeout(const Duration(seconds: 10));
-
       if (response.statusCode < 200 || response.statusCode >= 300) {
-        return UpdateCheckResult(
-          kind: UpdateKind.none,
-          currentVersion: currentVersion,
-          currentBuild: currentBuild,
-        );
+        return null;
       }
-
       final decoded = jsonDecode(response.body);
-      if (decoded is! Map<String, dynamic>) {
-        return UpdateCheckResult(
-          kind: UpdateKind.none,
-          currentVersion: currentVersion,
-          currentBuild: currentBuild,
-        );
-      }
-
-      final remote = _fromGithubRelease(decoded);
-      if (remote == null) {
-        return UpdateCheckResult(
-          kind: UpdateKind.none,
-          currentVersion: currentVersion,
-          currentBuild: currentBuild,
-        );
-      }
-
-      return UpdateCheckResult(
-        kind: _resolveKind(
-          currentVersion: currentVersion,
-          currentBuild: currentBuild,
-          remote: remote,
-        ),
-        remote: remote,
-        currentVersion: currentVersion,
-        currentBuild: currentBuild,
-      );
+      if (decoded is! Map<String, dynamic>) return null;
+      return _fromGithubRelease(decoded);
     } catch (_) {
-      // Network / parse errors: skip silently so the app still opens.
-      return UpdateCheckResult(
-        kind: UpdateKind.none,
-        currentVersion: currentVersion,
-        currentBuild: currentBuild,
-      );
+      return null;
+    }
+  }
+
+  Future<AppVersionInfo?> _fetchJsonFallback() async {
+    try {
+      final response = await _client
+          .get(
+            Uri.parse(SiteConfig.appVersionUrl),
+            headers: const {'User-Agent': 'cakeyousef-android-app'},
+          )
+          .timeout(const Duration(seconds: 8));
+      if (response.statusCode < 200 || response.statusCode >= 300) {
+        return null;
+      }
+      final decoded = jsonDecode(response.body);
+      if (decoded is! Map<String, dynamic>) return null;
+      final info = AppVersionInfo.fromJson(decoded);
+      if (info.downloadUrl.isEmpty) return null;
+      return info;
+    } catch (_) {
+      return null;
     }
   }
 
@@ -117,7 +145,8 @@ class VersionChecker {
     if (tag.isEmpty) return null;
 
     final parsed = _parseTag(tag);
-    final downloadUrl = _apkDownloadUrl(json['assets']);
+    final downloadUrl = _apkDownloadUrl(json['assets']) ??
+        _fallbackDownloadUrl(tag: tag, version: parsed.version);
     if (downloadUrl == null || downloadUrl.isEmpty) return null;
 
     final body = (json['body'] as String? ?? '').trim();
@@ -134,6 +163,14 @@ class VersionChecker {
       downloadUrl: downloadUrl,
       message: message.length > 400 ? '${message.substring(0, 400)}…' : message,
     );
+  }
+
+  static String? _fallbackDownloadUrl({
+    required String tag,
+    required String version,
+  }) {
+    final encodedTag = Uri.encodeComponent(tag);
+    return 'https://github.com/${SiteConfig.githubOwner}/${SiteConfig.githubRepo}/releases/download/$encodedTag/cakeyousef-$version.apk';
   }
 
   static ({String version, int build}) _parseTag(String tag) {
@@ -202,7 +239,6 @@ class VersionChecker {
     return UpdateKind.none;
   }
 
-  /// Compares dotted versions like `1.0.2`. Returns -1 / 0 / 1.
   static int compareVersions(String a, String b) => _compareVersions(a, b);
 
   static int _compareVersions(String a, String b) {

@@ -17,13 +17,13 @@ class AppBottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.95),
+        color: AppColors.card.withValues(alpha: 0.96),
         border: Border(
           top: BorderSide(color: AppColors.warm200.withValues(alpha: 0.5)),
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.04),
+            color: Colors.black.withValues(alpha: AppColors.isDark ? 0.28 : 0.04),
             blurRadius: 20,
             offset: const Offset(0, -4),
           ),
