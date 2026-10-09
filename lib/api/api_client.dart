@@ -22,7 +22,7 @@ class ApiClient {
   ApiClient({http.Client? client}) : _client = client ?? shared;
 
   static final http.Client shared = http.Client();
-  static const Duration receiveTimeout = Duration(seconds: 20);
+  static const Duration receiveTimeout = Duration(seconds: 15);
 
   final http.Client _client;
 
@@ -113,12 +113,23 @@ class ApiClient {
       throw const ApiException('اتصال به سرور برقرار نشد');
     }
 
+    final contentType = response.headers['content-type'] ?? '';
+    if (contentType.contains('text/html')) {
+      throw ApiException(
+        'مسیر API روی سرور فعال نیست (${response.statusCode})',
+        statusCode: response.statusCode,
+      );
+    }
+
     Map<String, dynamic> decodedBody = const {};
+    String? rawError;
     try {
       if (response.bodyBytes.isNotEmpty) {
         final decoded = jsonDecode(utf8.decode(response.bodyBytes));
         if (decoded is Map<String, dynamic>) {
           decodedBody = decoded;
+        } else if (decoded is String && decoded.trim().isNotEmpty) {
+          rawError = decoded.trim();
         }
       }
     } catch (_) {
@@ -135,12 +146,16 @@ class ApiClient {
     if (response.statusCode < 200 || response.statusCode >= 300) {
       if (response.statusCode == 401) {
         throw ApiException(
-          _errorMessage(decodedBody) ?? 'نشست منقضی شده؛ دوباره وارد شوید',
+          _errorMessage(decodedBody) ??
+              rawError ??
+              'نشست منقضی شده؛ دوباره وارد شوید',
           statusCode: 401,
         );
       }
       throw ApiException(
-        _errorMessage(decodedBody) ?? 'خطای سرور (${response.statusCode})',
+        _errorMessage(decodedBody) ??
+            rawError ??
+            'خطای سرور (${response.statusCode})',
         statusCode: response.statusCode,
       );
     }

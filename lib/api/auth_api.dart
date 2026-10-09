@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart' show debugPrint;
+
 import 'api_client.dart';
 import 'api_config.dart';
 
@@ -72,19 +74,25 @@ class AuthApi {
   AuthApi({ApiClient? client}) : _client = client ?? ApiClient();
   final ApiClient _client;
 
-  /// Option A — GET authorize URL for WebView / Custom Tab login.
+  /// Option A — authorize URL for browser / Custom Tab login.
+  ///
+  /// Tries guide endpoint first; falls back to `/app-login` (works today).
   Future<String> fetchAuthorizeUrl({
     String redirectUri = ApiConfig.authRedirectUri,
   }) async {
-    final body = await _client.get(
-      '/auth/authorize',
-      query: {'redirect_uri': redirectUri},
-    );
-    final url = body['authorizeUrl']?.toString().trim() ?? '';
-    if (url.isEmpty) {
-      throw const ApiException('آدرس ورود از سرور دریافت نشد');
+    try {
+      final body = await _client.get(
+        '${ApiConfig.authBaseUrl}/auth/authorize',
+        query: {'redirect_uri': redirectUri},
+      );
+      final url = body['authorizeUrl']?.toString().trim() ?? '';
+      if (url.isNotEmpty) return url;
+    } on ApiException catch (e) {
+      debugPrint('auth/authorize unavailable ($e) — using app-login fallback');
+    } catch (e) {
+      debugPrint('auth/authorize error ($e) — using app-login fallback');
     }
-    return url;
+    return ApiConfig.appLoginUrl(redirectUri: redirectUri);
   }
 
   /// Option A — exchange one-time deep-link code for Bearer token.
@@ -93,11 +101,25 @@ class AuthApi {
     if (trimmed.isEmpty) {
       throw const ApiException('کد ورود نامعتبر است');
     }
-    final body = await _client.post(
-      '/auth/token-exchange',
-      body: {'code': trimmed},
-    );
-    return AuthLoginResult.fromJson(body);
+
+    // Prefer documented mobile API, then legacy `/api/auth` path.
+    ApiException? lastError;
+    for (final path in <String>[
+      '${ApiConfig.authBaseUrl}/auth/token-exchange',
+      '${ApiConfig.baseUrl}/auth/token-exchange',
+    ]) {
+      try {
+        final body = await _client.post(path, body: {'code': trimmed});
+        return AuthLoginResult.fromJson(body);
+      } on ApiException catch (e) {
+        lastError = e;
+        debugPrint('token-exchange failed at $path: $e');
+      }
+    }
+    throw lastError ??
+        const ApiException(
+          'تبادل کد ورود در دسترس نیست؛ سرویس /api/v1 را روی سرور فعال کنید',
+        );
   }
 
   /// Option B — direct login with phone/email + password.
@@ -105,10 +127,22 @@ class AuthApi {
     required String identifier,
     required String password,
   }) async {
-    final body = await _client.post('/auth/login', body: {
-      'identifier': identifier.trim(),
-      'password': password,
-    });
-    return AuthLoginResult.fromJson(body);
+    ApiException? lastError;
+    for (final path in <String>[
+      '${ApiConfig.authBaseUrl}/auth/login',
+      '${ApiConfig.baseUrl}/auth/login',
+    ]) {
+      try {
+        final body = await _client.post(path, body: {
+          'identifier': identifier.trim(),
+          'password': password,
+        });
+        return AuthLoginResult.fromJson(body);
+      } on ApiException catch (e) {
+        lastError = e;
+        debugPrint('login failed at $path: $e');
+      }
+    }
+    throw lastError ?? const ApiException('ورود ناموفق بود');
   }
 }

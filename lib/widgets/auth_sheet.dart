@@ -74,7 +74,6 @@ class _AuthSheetState extends State<_AuthSheet> {
         _busy = false;
         _waitingBrowser = false;
       });
-      session.clearAuthError();
     }
   }
 
