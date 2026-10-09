@@ -72,7 +72,35 @@ class AuthApi {
   AuthApi({ApiClient? client}) : _client = client ?? ApiClient();
   final ApiClient _client;
 
-  /// Direct login with phone/email + password.
+  /// Option A — GET authorize URL for WebView / Custom Tab login.
+  Future<String> fetchAuthorizeUrl({
+    String redirectUri = ApiConfig.authRedirectUri,
+  }) async {
+    final body = await _client.get(
+      '/auth/authorize',
+      query: {'redirect_uri': redirectUri},
+    );
+    final url = body['authorizeUrl']?.toString().trim() ?? '';
+    if (url.isEmpty) {
+      throw const ApiException('آدرس ورود از سرور دریافت نشد');
+    }
+    return url;
+  }
+
+  /// Option A — exchange one-time deep-link code for Bearer token.
+  Future<AuthLoginResult> exchangeToken(String code) async {
+    final trimmed = code.trim();
+    if (trimmed.isEmpty) {
+      throw const ApiException('کد ورود نامعتبر است');
+    }
+    final body = await _client.post(
+      '/auth/token-exchange',
+      body: {'code': trimmed},
+    );
+    return AuthLoginResult.fromJson(body);
+  }
+
+  /// Option B — direct login with phone/email + password.
   Future<AuthLoginResult> login({
     required String identifier,
     required String password,

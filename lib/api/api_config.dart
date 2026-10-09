@@ -1,7 +1,14 @@
 class ApiConfig {
-  static const String host = 'http://62.60.222.55';
+  /// Production host from APP_DEVELOPER_API guide (Nginx :80 only).
+  static const String host = 'http://62.60.188.164';
 
   static String get baseUrl => '$host/api/v1';
+
+  /// Deep link after WebView / browser login.
+  static const String authRedirectUri = 'cakeyousef://auth';
+
+  /// Deep link after Zarinpal payment (wired with checkout later).
+  static const String paymentRedirectUri = 'cakeyousef://payment';
 
   /// Relative media paths → absolute URL on API host.
   static String mediaUrl(String? path) {

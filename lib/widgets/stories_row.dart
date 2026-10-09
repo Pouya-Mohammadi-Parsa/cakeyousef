@@ -64,34 +64,16 @@ class _StoriesRowState extends State<StoriesRow> {
   Widget build(BuildContext context) {
     final stories = _repo.stories;
     if (stories.isEmpty) {
-      if (_repo.loading) {
-        return const SizedBox(
-          height: 108,
-          child: Center(
-            child: SizedBox(
-              width: 22,
-              height: 22,
-              child: CircularProgressIndicator(strokeWidth: 2),
-            ),
+      return const SizedBox(
+        height: 108,
+        child: Center(
+          child: SizedBox(
+            width: 22,
+            height: 22,
+            child: CircularProgressIndicator(strokeWidth: 2),
           ),
-        );
-      }
-      if (_repo.error != null) {
-        return SizedBox(
-          height: 48,
-          child: Center(
-            child: TextButton.icon(
-              onPressed: () => _repo.load(force: true),
-              icon: const Icon(Icons.refresh, size: 18),
-              label: Text(
-                'تلاش مجدد استوری',
-                style: AppFonts.vazirmatn(fontSize: 12),
-              ),
-            ),
-          ),
-        );
-      }
-      return const SizedBox.shrink();
+        ),
+      );
     }
 
     return SizedBox(

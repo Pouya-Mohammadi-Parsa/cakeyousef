@@ -49,6 +49,9 @@ class AuthSession extends ChangeNotifier {
   bool accountLoading = false;
   String? accountError;
 
+  /// Transient auth error (e.g. deep-link token exchange failure).
+  String? authError;
+
   bool get isLoggedIn => token != null && token!.isNotEmpty && !_isExpired;
   bool get _isExpired =>
       expiresAt != null && DateTime.now().isAfter(expiresAt!);
@@ -83,12 +86,24 @@ class AuthSession extends ChangeNotifier {
     unawaited(refreshAccount().catchError((_) {}));
   }
 
+  void setAuthError(String? message) {
+    authError = message;
+    notifyListeners();
+  }
+
+  void clearAuthError() {
+    if (authError == null) return;
+    authError = null;
+    notifyListeners();
+  }
+
   Future<void> applyLogin(AuthLoginResult result) async {
     token = result.token;
     expiresAt = result.expiresIn > 0
         ? DateTime.now().add(Duration(seconds: result.expiresIn))
         : null;
     _applyUser(result.user);
+    authError = null;
 
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_tokenKey, result.token);
@@ -302,6 +317,7 @@ class AuthSession extends ChangeNotifier {
     checkoutDetails = null;
     accountLoading = false;
     accountError = null;
+    authError = null;
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_tokenKey);
     await prefs.remove(_expiresAtKey);
