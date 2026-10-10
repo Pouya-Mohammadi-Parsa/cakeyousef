@@ -22,7 +22,8 @@ class ApiClient {
   ApiClient({http.Client? client}) : _client = client ?? shared;
 
   static final http.Client shared = http.Client();
-  static const Duration receiveTimeout = Duration(seconds: 15);
+  /// Courses/content payloads can be large on slow links.
+  static const Duration receiveTimeout = Duration(seconds: 45);
 
   final http.Client _client;
 

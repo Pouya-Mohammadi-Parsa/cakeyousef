@@ -43,12 +43,38 @@ class _PopularCoursesSectionState extends State<PopularCoursesSection> {
                   child: CircularProgressIndicator(color: AppColors.gold600),
                 ),
               )
+            else if (_repo.error != null && !_repo.hasData)
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                child: Column(
+                  children: [
+                    Text(
+                      _repo.error!,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.vazirmatn(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.warm400,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => _repo.load(force: true),
+                      child: Text(
+                        'تلاش مجدد',
+                        style:
+                            GoogleFonts.vazirmatn(fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ],
+                ),
+              )
             else if (!_repo.hasData)
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 child: Text(
-                  'هنوز دوره‌ای متصل نشده — منتظر API دوره‌ها',
+                  'دوره‌ای برای نمایش نیست',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.vazirmatn(
                     fontSize: 13,

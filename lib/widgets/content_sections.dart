@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../screens/product_detail_screen.dart';
@@ -44,12 +44,38 @@ class _ProductsSectionState extends State<ProductsSection> {
                   child: CircularProgressIndicator(color: AppColors.gold600),
                 ),
               )
+            else if (_repo.error != null && !_repo.hasData)
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                child: Column(
+                  children: [
+                    Text(
+                      _repo.error!,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.vazirmatn(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.warm400,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => _repo.load(force: true),
+                      child: Text(
+                        'تلاش مجدد',
+                        style:
+                            GoogleFonts.vazirmatn(fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ],
+                ),
+              )
             else if (!_repo.hasData)
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 child: Text(
-                  'هنوز محصولی متصل نشده — منتظر API فروشگاه',
+                  'محصولی برای نمایش نیست',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.vazirmatn(
                     fontSize: 13,
@@ -60,7 +86,7 @@ class _ProductsSectionState extends State<ProductsSection> {
               )
             else
               SizedBox(
-                height: 220,
+                height: 228,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -78,10 +104,13 @@ class _ProductsSectionState extends State<ProductsSection> {
                         );
                       },
                       child: Container(
-                        width: 155,
+                        width: 158,
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
+                          color: AppColors.card,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: AppColors.warm200.withValues(alpha: 0.45),
+                          ),
                           boxShadow: AppColors.cardShadow,
                         ),
                         clipBehavior: Clip.antiAlias,
@@ -89,7 +118,7 @@ class _ProductsSectionState extends State<ProductsSection> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: 112,
+                              height: 118,
                               child: Stack(
                                 fit: StackFit.expand,
                                 children: [
@@ -97,8 +126,54 @@ class _ProductsSectionState extends State<ProductsSection> {
                                   if (item.imageUrl.isNotEmpty)
                                     AppNetworkImage(
                                       url: item.imageUrl,
-                                      width: 155,
-                                      height: 112,
+                                      width: 158,
+                                      height: 118,
+                                    ),
+                                  if (item.category.isNotEmpty)
+                                    Positioned(
+                                      top: 8,
+                                      right: 8,
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 7, vertical: 3),
+                                        decoration: BoxDecoration(
+                                          color: Colors.black
+                                              .withValues(alpha: 0.45),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Text(
+                                          item.category,
+                                          style: GoogleFonts.vazirmatn(
+                                            fontSize: 9,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  if (!item.inStock)
+                                    Positioned(
+                                      left: 8,
+                                      bottom: 8,
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 7, vertical: 3),
+                                        decoration: BoxDecoration(
+                                          color: Colors.red.shade700
+                                              .withValues(alpha: 0.9),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Text(
+                                          'ناموجود',
+                                          style: GoogleFonts.vazirmatn(
+                                            fontSize: 9,
+                                            fontWeight: FontWeight.w800,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                 ],
                               ),
@@ -116,11 +191,12 @@ class _ProductsSectionState extends State<ProductsSection> {
                                       fontSize: 12,
                                       fontWeight: FontWeight.w800,
                                       color: AppColors.dark900,
+                                      height: 1.35,
                                     ),
                                   ),
                                   const SizedBox(height: 6),
                                   Text(
-                                    item.priceLabel,
+                                    '${item.priceLabel} ت',
                                     style: GoogleFonts.vazirmatn(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w900,

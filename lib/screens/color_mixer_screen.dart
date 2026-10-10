@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -71,7 +71,7 @@ class _ColorMixerScreenState extends State<ColorMixerScreen> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.card,
         elevation: 0,
         title: Text(
           'ترکیب رنگ',
@@ -157,7 +157,7 @@ class _MixCanvas extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(18, 22, 18, 18),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.card,
         borderRadius: BorderRadius.circular(28),
         boxShadow: AppColors.cardShadowLg,
       ),
@@ -267,7 +267,7 @@ class _RecipeCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.card,
         borderRadius: BorderRadius.circular(22),
         boxShadow: AppColors.cardShadow,
       ),
@@ -379,7 +379,7 @@ class _PigmentGrid extends StatelessWidget {
         final pigment = ColorMixerEngine.pigments[index];
         final count = units[pigment.id] ?? 0;
         return Material(
-          color: Colors.white,
+          color: AppColors.card,
           borderRadius: BorderRadius.circular(18),
           child: InkWell(
             onTap: () => onAdd(pigment),

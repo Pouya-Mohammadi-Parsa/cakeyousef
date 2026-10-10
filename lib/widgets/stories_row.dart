@@ -116,7 +116,9 @@ class _StoryAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ringGradient = story.seen ? null : _instagramRing;
-    final ringColor = story.seen ? const Color(0xFFDBDBDB) : null;
+    final ringColor = story.seen
+        ? (AppColors.isDark ? AppColors.warm300 : const Color(0xFFDBDBDB))
+        : null;
 
     return GestureDetector(
       onTap: onTap,
@@ -143,9 +145,9 @@ class _StoryAvatar extends StatelessWidget {
                   Container(
                     width: 66,
                     height: 66,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.white,
+                      color: AppColors.card,
                     ),
                   ),
                   ClipOval(

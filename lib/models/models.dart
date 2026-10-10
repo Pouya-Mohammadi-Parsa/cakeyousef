@@ -1,5 +1,44 @@
 import 'package:flutter/material.dart';
 
+import '../utils/format_utils.dart';
+
+class CourseLesson {
+  final String id;
+  final String title;
+  final String duration;
+  final bool isFree;
+  final String videoUrl;
+
+  const CourseLesson({
+    required this.id,
+    required this.title,
+    required this.duration,
+    required this.isFree,
+    required this.videoUrl,
+  });
+
+  bool get hasVideo => videoUrl.trim().isNotEmpty;
+
+  String get durationLabel {
+    final d = duration.trim();
+    if (d.isEmpty || d == '00:00' || d == '0:00') return '';
+    return toFaDigits(d);
+  }
+
+  factory CourseLesson.fromJson(Map<String, dynamic> json, {int index = 0}) {
+    final id = '${json['id'] ?? index}';
+    return CourseLesson(
+      id: id.isEmpty ? '$index' : id,
+      title: json['title']?.toString().trim() ?? 'درس ${index + 1}',
+      duration: json['duration']?.toString().trim() ?? '',
+      isFree: json['isFree'] == true,
+      videoUrl: json['videoUrl']?.toString().trim() ??
+          json['url']?.toString().trim() ??
+          '',
+    );
+  }
+}
+
 class QuickAccessItem {
   final String title;
   final IconData icon;
@@ -37,11 +76,20 @@ class CourseItem {
   final String? slug;
   final String? studentsLabel;
   final List<String> chapterTitles;
+  final List<CourseLesson> videoLessons;
   final String? siteUrl;
   final List<String> learnPoints;
+  final List<String> requirements;
+  final List<String> featureLabels;
   final String? level;
   final String? durationLabel;
   final bool? hasPurchased;
+  final String? instructorAvatar;
+  final String? instructorBio;
+  final String? courseType;
+  final bool onlineSupport;
+  final bool finalExam;
+  final String? category;
 
   const CourseItem({
     required this.emoji,
@@ -64,12 +112,31 @@ class CourseItem {
     this.slug,
     this.studentsLabel,
     this.chapterTitles = const [],
+    this.videoLessons = const [],
     this.siteUrl,
     this.learnPoints = const [],
+    this.requirements = const [],
+    this.featureLabels = const [],
     this.level,
     this.durationLabel,
     this.hasPurchased,
+    this.instructorAvatar,
+    this.instructorBio,
+    this.courseType,
+    this.onlineSupport = false,
+    this.finalExam = false,
+    this.category,
   });
+
+  bool get canAccessAllVideos => isFree || hasPurchased == true;
+
+  CourseLesson? get firstPlayableLesson {
+    for (final l in videoLessons) {
+      if (!l.hasVideo) continue;
+      if (canAccessAllVideos || l.isFree) return l;
+    }
+    return null;
+  }
 }
 
 class CourseTag {

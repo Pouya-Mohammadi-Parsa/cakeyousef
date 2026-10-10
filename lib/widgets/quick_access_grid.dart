@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../models/models.dart';
@@ -86,7 +86,7 @@ class QuickAccessGrid extends StatelessWidget {
         pageBuilder: (_, __, ___) => Scaffold(
           backgroundColor: AppColors.cream,
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: AppColors.card,
             elevation: 0,
             title: Text(
               item.title,
@@ -157,8 +157,11 @@ class _AccessCardState extends State<_AccessCard> {
         duration: const Duration(milliseconds: 120),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(18),
+            color: AppColors.card,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: AppColors.warm200.withValues(alpha: 0.55),
+            ),
             boxShadow: AppColors.cardShadow,
           ),
           padding: const EdgeInsets.fromLTRB(8, 12, 8, 10),
@@ -168,7 +171,9 @@ class _AccessCardState extends State<_AccessCard> {
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: widget.item.bgColor,
+                    color: AppColors.isDark
+                        ? AppColors.creamDark
+                        : widget.item.bgColor,
                     borderRadius: BorderRadius.circular(14),
                   ),
                   clipBehavior: Clip.antiAlias,

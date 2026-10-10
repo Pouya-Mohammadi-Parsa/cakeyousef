@@ -41,8 +41,11 @@ class CourseCard extends StatelessWidget {
       child: Container(
       width: 260,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.card,
         borderRadius: BorderRadius.circular(24),
+        border: Border.all(
+          color: AppColors.warm200.withValues(alpha: 0.45),
+        ),
         boxShadow: AppColors.cardShadowLg,
       ),
       clipBehavior: Clip.antiAlias,

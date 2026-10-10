@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../models/catalog_models.dart';
@@ -119,7 +119,7 @@ class _ShopScreenState extends State<ShopScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                   decoration: BoxDecoration(
                     gradient: selected ? AppColors.goldGradient : null,
-                    color: selected ? null : Colors.white,
+                    color: selected ? null : AppColors.card,
                     borderRadius: BorderRadius.circular(14),
                     boxShadow: AppColors.cardShadow,
                   ),
@@ -223,8 +223,9 @@ class _ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: AppColors.card,
       borderRadius: BorderRadius.circular(20),
+      elevation: 0,
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(20),
@@ -238,7 +239,8 @@ class _ProductCard extends StatelessWidget {
             children: [
               Expanded(
                 child: ClipRRect(
-                  borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                  borderRadius:
+                      const BorderRadius.vertical(top: Radius.circular(20)),
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
@@ -248,33 +250,58 @@ class _ProductCard extends StatelessWidget {
                           url: product.imageUrl,
                           fit: BoxFit.cover,
                         ),
-                      Positioned(
-                        top: 8,
-                        right: 8,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                          decoration: BoxDecoration(
-                            color: Colors.black.withValues(alpha: 0.45),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Text(
-                            product.category,
-                            style: GoogleFonts.vazirmatn(
-                              fontSize: 9,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white,
+                      if (product.category.isNotEmpty)
+                        Positioned(
+                          top: 8,
+                          right: 8,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: Colors.black.withValues(alpha: 0.45),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              product.category,
+                              style: GoogleFonts.vazirmatn(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
-                      ),
+                      if (product.discountLabel != null)
+                        Positioned(
+                          top: 8,
+                          left: 8,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: AppColors.gold600,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              product.discountLabel!,
+                              style: GoogleFonts.vazirmatn(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
                       if (!product.inStock)
                         Positioned(
                           left: 8,
                           bottom: 8,
                           child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 3),
                             decoration: BoxDecoration(
-                              color: Colors.red.shade700.withValues(alpha: 0.9),
+                              color:
+                                  Colors.red.shade700.withValues(alpha: 0.9),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Text(
@@ -308,6 +335,15 @@ class _ProductCard extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 6),
+                    if (product.oldPriceLabel != null)
+                      Text(
+                        '${product.oldPriceLabel} ت',
+                        style: GoogleFonts.vazirmatn(
+                          fontSize: 10,
+                          color: AppColors.warm400,
+                          decoration: TextDecoration.lineThrough,
+                        ),
+                      ),
                     Text(
                       '${product.priceLabel} ت',
                       style: GoogleFonts.vazirmatn(

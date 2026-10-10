@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -115,7 +115,7 @@ class _ChatScreenState extends State<ChatScreen> {
         preferredSize: const Size.fromHeight(66),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.card,
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withValues(alpha: 0.04),
@@ -248,7 +248,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 16,
                 MediaQuery.of(context).padding.bottom + 12,
               ),
-              color: Colors.white,
+              color: AppColors.card,
               child: Text(
                 'فقط مشاهده — این یک کانال است',
                 textAlign: TextAlign.center,
@@ -312,7 +312,7 @@ class _Bubble extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(14, 10, 14, 8),
         decoration: BoxDecoration(
           gradient: mine ? AppColors.goldGradient : null,
-          color: mine ? null : Colors.white,
+          color: mine ? null : AppColors.card,
           borderRadius: BorderRadius.only(
             topLeft: const Radius.circular(18),
             topRight: const Radius.circular(18),
@@ -391,7 +391,7 @@ class _Composer extends StatelessWidget {
         MediaQuery.of(context).padding.bottom + 10,
       ),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.card,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.05),
